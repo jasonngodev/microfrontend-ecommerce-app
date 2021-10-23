@@ -1,7 +1,19 @@
 import faker from 'faker';
 
-const cartText = `<div>You have ${faker.datatype.number(
-  20
-)} items in your cart</div>`;
+const mount = (el) => {
+  const cartText = `<div>You have ${faker.datatype.number(
+    20
+  )} items in your cart</div>`;
 
-document.querySelector('#dev-cart').innerHTML = cartText;
+  el.innerHTML = cartText;
+};
+
+// @ts-ignore
+if (process.env.NODE_ENV === 'development') {
+  const el = document.querySelector('#dev-cart');
+  if (el) {
+    mount(el);
+  }
+}
+
+export { mount };
