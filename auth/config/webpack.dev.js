@@ -28,4 +28,5 @@ const devConfig = {
   ],
 };
 
+// @ts-ignore
 module.exports = merge(commonConfig, devConfig);
