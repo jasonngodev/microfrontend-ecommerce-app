@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 // @ts-ignore
-import { mount } from 'marketing/MarketingApp';
+import { mount } from 'auth/AuthApp';
 import { useHistory } from 'react-router-dom';
 
 export default () => {
